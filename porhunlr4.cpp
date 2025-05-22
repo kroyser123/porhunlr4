@@ -7,7 +7,11 @@ bool charEntered = false;
 
 // Функция для ввода символа
 void inputChar() {
-   
+   cout << "Введите символ: ";
+    cin >> currentChar;
+    charEntered = true;
+    cout << "Символ сохранен.\n";
+    // сделал тимофей рубцов
 }
 
 // Функция для вывода предыдущего символа
