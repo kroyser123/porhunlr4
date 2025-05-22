@@ -27,7 +27,13 @@ void printPreviousChar() {
 
 // Функция для вывода следующего символа
 void printNextChar() {
-  
+  if (!charEntered) {
+        cout << "Ошибка: символ не введен. Сначала выберите пункт 1.\n";
+        return;
+    }
+    char nextChar = currentChar + 1;
+    cout << "Следующий символ: " << nextChar 
+         << " (код ASCII: " << static_cast<int>(nextChar) << ")\n";
 }
 
 // Функция для отображения меню
