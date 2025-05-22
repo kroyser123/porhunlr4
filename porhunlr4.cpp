@@ -16,7 +16,13 @@ void inputChar() {
 
 // Функция для вывода предыдущего символа
 void printPreviousChar() {
-   
+   if (!charEntered) {
+        cout << "Ошибка: символ не введен. Сначала выберите пункт 1.\n";
+        return;
+    }
+    char prevChar = currentChar - 1;
+    cout << "Предыдущий символ: " << prevChar 
+         << " (код ASCII: " << static_cast<int>(prevChar) << ")\n";
 }
 
 // Функция для вывода следующего символа
